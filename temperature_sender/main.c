@@ -114,7 +114,7 @@ static void adv_packet_update_timeout_handler(void * p_context)
 
     if (take_temperature(&temp) != NRF_SUCCESS)
     {
-        temp = FAULTY_TEMPERATURE;
+        temp = FAULTY_TEMPERATURE+1;
     }
 
     if (take_battery_level(&batt) != NRF_SUCCESS)
